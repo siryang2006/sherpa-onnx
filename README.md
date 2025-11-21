@@ -2,6 +2,31 @@
 https://k2-fsa.github.io/sherpa/onnx/install/windows.html#bit-windows-x64
 
 
+C:\Windows\System32\drivers\etc\hosts添加
+160.16.86.14 huggingface.co
+
+CPU:
+git clone https://github.com/k2-fsa/sherpa-onnx
+cd sherpa-onnx
+mkdir build
+cd build
+cmake -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Debug ..
+cmake --build . --config Debug --parallel 4
+
+
+
+
+GPU (CUDA 11.8)
+git clone https://github.com/k2-fsa/sherpa-onnx
+cd sherpa-onnx
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DSHERPA_ONNX_ENABLE_GPU=ON ..
+cmake --build . --config Release
+
+
+
+
  ### Supported functions
 
 |Speech recognition| [Speech synthesis][tts-url] | [Source separation][ss-url] |

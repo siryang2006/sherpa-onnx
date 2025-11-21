@@ -247,54 +247,54 @@ void CStreamingSpeechRecognitionDlg::ShowInitRecognizerHelpMessage() {
       "We give two examples below to show you how to download models\r\n\r\n";
     msg += "(1) Transducer\r\n\r\n";
     msg +=
-        "https://huggingface.co/pkufool/"
+        "https://hf-mirror.com/pkufool/"
         "icefall-asr-zipformer-streaming-wenetspeech-20230615";
     msg += "\r\n\r\n";
     msg +=
-        "wget https:// "
-        "huggingface.co/pkufool/"
+        "wget https://"
+        "hf-mirror.com/pkufool/"
         "icefall-asr-zipformer-streaming-wenetspeech-20230615/resolve/main/exp/"
         "encoder-epoch-12-avg-4-chunk-16-left-128.onnx\r\n";
     msg +=
-        "wget https:// "
-        "huggingface.co/pkufool/"
+        "wget https://"
+        "hf-mirror.com/pkufool/"
         "icefall-asr-zipformer-streaming-wenetspeech-20230615/resolve/main/exp/"
         "decoder-epoch-12-avg-4-chunk-16-left-128.onnx\r\n";
     msg +=
-        "wget https:// "
-        "huggingface.co/pkufool/"
+        "wget https://"
+        "hf-mirror.com/pkufool/"
         "icefall-asr-zipformer-streaming-wenetspeech-20230615/resolve/main/exp/"
         "joiner-epoch-12-avg-4-chunk-16-left-128.onnx\r\n";
     msg +=
         "wget "
-        "https://huggingface.co/pkufool/"
+        "https://hf-mirror.com/pkufool/"
         "icefall-asr-zipformer-streaming-wenetspeech-20230615/resolve/main/"
         "data/lang_char/tokens.txt\r\n";
 
     msg += "\r\nNow rename them.\r\n";
-    msg += "mv encoder-epoch-12-avg-4-chunk-16-left-128.onnx encoder.onnx\r\n";
-    msg += "mv decoder-epoch-12-avg-4-chunk-16-left-128.onnx decoder.onnx\r\n";
-    msg += "mv joiner-epoch-12-avg-4-chunk-16-left-128.onnx joiner.onnx\r\n";
+    msg += "ren encoder-epoch-12-avg-4-chunk-16-left-128.onnx encoder.onnx\r\n";
+    msg += "ren decoder-epoch-12-avg-4-chunk-16-left-128.onnx decoder.onnx\r\n";
+    msg += "ren joiner-epoch-12-avg-4-chunk-16-left-128.onnx joiner.onnx\r\n";
     msg += "\r\n";
     msg += "(2) Paraformer\r\n\r\n";
     msg +=
         "wget "
-        "https://huggingface.co/csukuangfj/"
+        "https://hf-mirror.com/csukuangfj/"
         "sherpa-onnx-streaming-paraformer-bilingual-zh-en/resolve/main/"
         "encoder.int8.onnx\r\n";
     msg +=
         "wget "
-        "https://huggingface.co/csukuangfj/"
+        "https://hf-mirror.com/csukuangfj/"
         "sherpa-onnx-streaming-paraformer-bilingual-zh-en/resolve/main/"
         "decoder.int8.onnx\r\n";
     msg +=
         "wget "
-        "https://huggingface.co/csukuangfj/"
+        "https://hf-mirror.com/csukuangfj/"
         "sherpa-onnx-streaming-paraformer-bilingual-zh-en/resolve/main/"
         "tokens.txt\r\n";
     msg += "\r\nNow rename them.\r\n";
-    msg += "mv encoder.int8.onnx paraformer-encoder.onnx\r\n";
-    msg += "mv decoder.int8.onnx paraformer-decoder.onnx\r\n\r\n";
+    msg += "ren encoder.int8.onnx paraformer-encoder.onnx\r\n";
+    msg += "ren decoder.int8.onnx paraformer-decoder.onnx\r\n\r\n";
     msg += "That's it!\r\n";
 
     AppendLineToMultilineEditCtrl(msg);

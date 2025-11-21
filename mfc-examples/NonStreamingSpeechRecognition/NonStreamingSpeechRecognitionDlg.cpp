@@ -313,54 +313,54 @@ void CNonStreamingSpeechRecognitionDlg::ShowInitRecognizerHelpMessage() {
   msg += "(1) Transducer\r\n\r\n";
   msg +=
       "We use "
-      "https://huggingface.co/pkufool/"
+      "https://hf-mirror.com/pkufool/"
       "icefall-asr-zipformer-wenetspeech-20230615 below\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/pkufool/"
+      "https://hf-mirror.com/pkufool/"
       "icefall-asr-zipformer-wenetspeech-20230615/resolve/main/exp/"
       "encoder-epoch-12-avg-4.onnx\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/pkufool/"
+      "https://hf-mirror.com/pkufool/"
       "icefall-asr-zipformer-wenetspeech-20230615/resolve/main/exp/"
       "decoder-epoch-12-avg-4.onnx\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/pkufool/"
+      "https://hf-mirror.com/pkufool/"
       "icefall-asr-zipformer-wenetspeech-20230615/resolve/main/exp/"
       "joiner-epoch-12-avg-4.onnx\r\n";
   msg += "\r\n Now rename them\r\n";
-  msg += "mv encoder-epoch-12-avg-4.onnx encoder.onnx\r\n";
-  msg += "mv decoder-epoch-12-avg-4.onnx decoder.onnx\r\n";
-  msg += "mv joiner-epoch-12-avg-4.onnx joiner.onnx\r\n\r\n";
+  msg += "move encoder-epoch-12-avg-4.onnx encoder.onnx\r\n";
+  msg += "move decoder-epoch-12-avg-4.onnx decoder.onnx\r\n";
+  msg += "move joiner-epoch-12-avg-4.onnx joiner.onnx\r\n\r\n";
   msg += "(2) Paraformer\r\n\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/csukuangfj/"
+      "https://hf-mirror.com/csukuangfj/"
       "sherpa-onnx-paraformer-zh-2023-09-14/resolve/main/model.int8.onnx\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/csukuangfj/sherpa-onnx-paraformer-zh-2023-09-14/"
+      "https://hf-mirror.com/csukuangfj/sherpa-onnx-paraformer-zh-2023-09-14/"
       "resolve/main/tokens.txt\r\n\r\n";
   msg += "\r\n Now rename them\r\n";
-  msg += "mv model.onnx paraformer.onnx\r\n\r\n";
+  msg += "move model.onnx paraformer.onnx\r\n\r\n";
   msg += "(3) Whisper\r\n\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/"
+      "https://hf-mirror.com/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/"
       "main/tiny.en-encoder.onnx\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/"
+      "https://hf-mirror.com/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/"
       "main/tiny.en-decoder.onnx\r\n";
   msg +=
       "wget "
-      "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/"
+      "https://hf-mirror.com/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/"
       "main/tiny.en-tokens.txt\r\n";
   msg += "\r\n Now rename them\r\n";
-  msg += "mv tiny.en-encoder.onnx whisper-encoder.onnx\r\n";
-  msg += "mv tiny.en-decoder.onnx whisper-decoder.onnx\r\n";
+  msg += "move tiny.en-encoder.onnx whisper-encoder.onnx\r\n";
+  msg += "move tiny.en-decoder.onnx whisper-decoder.onnx\r\n";
   msg += "\r\n";
   msg += "That's it!\r\n";
 
